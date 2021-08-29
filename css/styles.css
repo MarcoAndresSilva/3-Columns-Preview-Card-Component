@@ -1,0 +1,112 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Lexend Deca',sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Big Shoulders Display', cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main  */
+.main {
+  display: flex;
+  min-width: 320px;
+  max-width: 800px;
+}
+
+/* columns   */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  padding: 2rem;
+  width: 25%;
+  overflow: hidden;
+  transition: width .2s ease-in-out;
+  cursor: pointer;
+}
+
+.column.active{
+  width: 50%;
+}
+
+.column:first-of-type {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.column:last-of-type {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.sedans {
+  background: hsl(31, 77%, 52%);
+}
+
+.suvs {
+  background: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background: hsl(179, 100%, 13%);
+}
+
+
+.img-icon{
+  padding: 1rem 0;
+}
+
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', 'cursive';
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+.text-paragraph {
+  font-size: 15px;
+  margin-bottom: 3rem;
+  line-height: 1.5rem;
+  flex-grow: 1; /* si hay espacio disponible en el contenedor padre este elemento crece y lo ocupa*/
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 1rem;
+  font-size: 14px;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.sedans .link {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs .link {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury .link {
+  color: hsl(179, 100%, 13%);
+}
